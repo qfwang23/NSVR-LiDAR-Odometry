@@ -5,7 +5,7 @@
 Reference implementation accompanying the manuscript **Surface-Constrained Vertical
 Refinement and Nuisance Elimination-Based LiDAR Odometry**.
 
-[Method](#method) · [Results](#paper-results) · [Build](#build-and-test) ·
+[Demo](#four-sequence-mapping-replay) · [Method](#method) · [Results](#paper-results) · [Build](#build-and-test) ·
 [Run](#run) · [Evaluation](#position-evaluation-and-timing)
 
 > Publication status: prepared for submission to *IEEE Transactions on Vehicular
@@ -15,6 +15,24 @@ NSVR combines motion-predicted two-stage registration with selective height and
 tilt refinement. This repository contains the C++ implementation, the final
 KITTI and M2DGR configuration files, lightweight run/evaluation tools, and
 synthetic regression tests.
+
+## Four-sequence mapping replay
+
+https://github.com/user-attachments/assets/cbf88f71-be8b-450c-b9d1-18fba68e870e
+
+**KITTI 00 and 02 · M2DGR Hall01 and Room01 · 1080p / 24 fps / 28 seconds.**
+Each panel is generated from the corresponding final NSVR trajectory and original
+LiDAR scans. Point clouds accumulate in temporal order; orange lines show the
+estimated trajectories, and cyan markers show the current poses. All four source
+runs contain every input scan.
+
+The video uses accelerated, normalized sequence progress; the original
+evaluations used 1.0x recorded-speed playback. Cloud subsampling and fixed camera
+framing are for visualization only, without re-estimating or smoothing poses.
+
+[Download MP4](docs/media/nsvr_four_sequence_demo.mp4) ·
+[View poster](docs/media/nsvr_four_sequence_poster.png) ·
+[Rendering details and reproduction](docs/demo.md)
 
 ## Method
 

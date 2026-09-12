@@ -1,0 +1,88 @@
+{
+  "method": "NSVR",
+  "source_core_commit": "def06cff6b0aedf1207dad3887aa705f8a29d638",
+  "width": 1920,
+  "height": 1080,
+  "fps": 24.0,
+  "frames": 672,
+  "seconds": 28.0,
+  "codec": "avc1",
+  "video_sha256": "5b0d19c074dcb79ed28e87956677c8b4b128675410c740abce02c28d9819a4ef",
+  "video_bytes": 3281936,
+  "visualization_only": true,
+  "sequence_progress_normalized": true,
+  "ground_truth_used": false,
+  "new_odometry_runs": false,
+  "projection": "Fixed per-sequence orthographic camera; no pose smoothing, GT alignment or sensor correction.",
+  "sampling": "Uniform selected scans and point rows for display only; source trajectories cover every input scan.",
+  "sequences": [
+    {
+      "label": "KITTI 00",
+      "bag": "00.bag",
+      "bag_bytes": 18527163757,
+      "trajectory_sha256": "17ea544aad7dbee2b9700e210ca1a70fe3681c92e95b4aec189e470bd76cabc3",
+      "timing_sha256": "c6ff2bb484603fdddd369f2ebdbac6fe5b8fbcbece0736dff9bdb04ae544d660",
+      "complete_pose_count": 4541,
+      "sampled_clouds": 300,
+      "visualized_points": 2400000,
+      "header_duration_s": 470.581604004,
+      "all_sampled_header_stamps_match": true,
+      "camera_margin_m": null,
+      "range_mask_m": [
+        5.0,
+        100.0
+      ]
+    },
+    {
+      "label": "KITTI 02",
+      "bag": "02.bag",
+      "bag_bytes": 19656706245,
+      "trajectory_sha256": "c4ba78493e7cdf632ad1c95412d319b4c7e7fe8f4975c3dd9b2f74375de69e4c",
+      "timing_sha256": "1055a3444b1e97e5948010c70c2276def70d934947768e0d3208303d43ecc459",
+      "complete_pose_count": 4661,
+      "sampled_clouds": 300,
+      "visualized_points": 2400000,
+      "header_duration_s": 483.275909424,
+      "all_sampled_header_stamps_match": true,
+      "camera_margin_m": null,
+      "range_mask_m": [
+        5.0,
+        100.0
+      ]
+    },
+    {
+      "label": "M2DGR Hall01",
+      "bag": "hall_01.bag",
+      "bag_bytes": 29054106807,
+      "trajectory_sha256": "827372f884e77210887a13cd885328d42cee54a7860bbc17258139e2f9491c0a",
+      "timing_sha256": "a61d97892f074896798e55d6d248d8486eefa346a9b55e77a2b8f98bb73ac28e",
+      "complete_pose_count": 3511,
+      "sampled_clouds": 300,
+      "visualized_points": 2400000,
+      "header_duration_s": 351.6878957748413,
+      "all_sampled_header_stamps_match": true,
+      "camera_margin_m": 7.0,
+      "range_mask_m": [
+        1.0,
+        100.0
+      ]
+    },
+    {
+      "label": "M2DGR Room01",
+      "bag": "room_01.bag",
+      "bag_bytes": 14035740293,
+      "trajectory_sha256": "d27310027d8c9d5de4872a06eadd7a8e9da62b8dc53c9500031900a151c75474",
+      "timing_sha256": "62ff7628d35a02a95097be04c5a8bb9a71710a4db06d5df2765e0f215c6a8a01",
+      "complete_pose_count": 728,
+      "sampled_clouds": 300,
+      "visualized_points": 2400000,
+      "header_duration_s": 72.8425841331482,
+      "all_sampled_header_stamps_match": true,
+      "camera_margin_m": 6.0,
+      "range_mask_m": [
+        1.0,
+        100.0
+      ]
+    }
+  ]
+}

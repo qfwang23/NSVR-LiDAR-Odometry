@@ -1,0 +1,6 @@
+[
+  {"label":"KITTI 00", "bag":"/path/to/KITTI/00.bag", "trajectory":"/path/to/kitti-run/00/trajectory.tum", "timing":"/path/to/kitti-run/00/timing.csv", "topic":"/velodyne_points", "min_range":5.0, "max_range":100.0},
+  {"label":"KITTI 02", "bag":"/path/to/KITTI/02.bag", "trajectory":"/path/to/kitti-run/02/trajectory.tum", "timing":"/path/to/kitti-run/02/timing.csv", "topic":"/velodyne_points", "min_range":5.0, "max_range":100.0},
+  {"label":"M2DGR Hall01", "bag":"/path/to/M2DGR/hall_01.bag", "trajectory":"/path/to/m2dgr-run/hall_01/trajectory.tum", "timing":"/path/to/m2dgr-run/hall_01/timing.csv", "topic":"/velodyne_points", "min_range":1.0, "max_range":100.0, "view_margin_m":7.0},
+  {"label":"M2DGR Room01", "bag":"/path/to/M2DGR/room_01.bag", "trajectory":"/path/to/m2dgr-run/room_01/trajectory.tum", "timing":"/path/to/m2dgr-run/room_01/timing.csv", "topic":"/velodyne_points", "min_range":1.0, "max_range":100.0, "view_margin_m":6.0}
+]

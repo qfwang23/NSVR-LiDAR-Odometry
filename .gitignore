@@ -1,0 +1,11 @@
+build*/
+results/
+__pycache__/
+*.pyc
+*.bag
+*.bag.active
+*.pcd
+*.ply
+*.las
+*.laz
+.vscode/

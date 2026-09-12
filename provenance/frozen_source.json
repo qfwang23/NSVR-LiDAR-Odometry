@@ -1,0 +1,41 @@
+{
+  "method_revision": "surface-constrained-vertical-refinement-v9",
+  "frozen_core_commit": "def06cff6b0aedf1207dad3887aa705f8a29d638",
+  "core_export": "All 13 core/pipeline files are byte-identical to the frozen paper implementation; no algorithm changes were made for this release.",
+  "upstream_ancestry": {
+    "repository": "https://github.com/qfwang23/LO",
+    "commit": "17825a30a563046c5e38bb52e51d5a015772a1f8"
+  },
+  "adapter": {
+    "source": "benchmarks/kitti_unified_20260910/ours_bag.cpp",
+    "sha256": "a8b6591196c23b4f1532ca75c13f17df2af62c5e75b32802d8c6a5cdb9a3f4f2",
+    "frozen_v9_adapter_sha256": "b4eb0681eec73d9e9075bd0462ba7409bf50da7b572117baa69bc990ebf798ff",
+    "change": "Only an algorithm_ms timer and CSV column were added to the frozen V9 bag adapter; point input and odometry calls are unchanged.",
+    "algorithm_ms": "Wall time from conversion of an already deserialized PointCloud2 to completion of the pose and reference/map update. Excludes bag I/O, deserialization, replay waiting and output-file I/O."
+  },
+  "config_sources": {
+    "config/kitti.yaml": "result/kitti_unified_full_20260910/ours_kitti.yaml",
+    "config/m2dgr.yaml": "result/m2dgr_selected_v060_20260910/config.yaml"
+  },
+  "config_sha256": {
+    "config/kitti.yaml": "6cafa5e43a7807ba0e66dcceec7ddb8bfa0638e2ab763bcd6df87b874d5a5192",
+    "config/m2dgr.yaml": "c654b6bac1c6abf05cdd17ed2112ee6acb8ad8844ae80f186cdbbbaf1e1185f2"
+  },
+  "core_sha256": {
+    "cpp/LO/core/Registration.cpp": "a4f0180ef67837ec92ccde78c9705912df7d6d7810226ca6a8f5ac967a9c3d35",
+    "cpp/LO/core/Registration.hpp": "c9c4bed4a7e67226ea875848d9d468b1cacfff0535b4eec93a9034390536d911",
+    "cpp/LO/core/VoxelHashMap.cpp": "b22f6d38552f6aeb8ac496ae05d75f3c9f83a80669546bc836cf263a573b41d1",
+    "cpp/LO/core/VoxelHashMap.hpp": "fc1b81a4df2f8d8b7fe7aad2674f6df91fa9e56192aaa550213a13df96d11a2b",
+    "cpp/LO/core/VerticalGain.hpp": "86858e0ee1406c0ec78610efd51bb9f6f21296cf23763b4297a430f8ba4291b0",
+    "cpp/LO/core/CenteredUpdate.hpp": "087d721a511affe1cd9ee60ddbff758cea4848877b02a8ebc0b10cbfa2ea135f",
+    "cpp/LO/core/VerticalGeometry.hpp": "50616055ec982abdad3622c9d54feb4f940cf3d8a1debdee6fc7e18f7dffe82b",
+    "cpp/LO/core/VoxelGrid.hpp": "44edb34652db1d5167fd2b0121f29d064eeff5de4f6f2a22daff6229b37dafc7",
+    "cpp/LO/pipeline/LO.cpp": "13e93f5e6ec405e82a262881709e7c9dc60f11d5aa2f7ee5c39a2a43baeac999",
+    "cpp/LO/pipeline/LO.hpp": "e0aaf70c72740ef60126dd287078a89635deead5274f83fb8722c0e1853571b4",
+    "cpp/LO/core/TemporalSurfaceAnchor.hpp": "d9e49d551cb48f84d391695373bf8deed3b82849895a842ba85ec3c7649102f9",
+    "cpp/LO/core/VerticalSurface.hpp": "9db9e057f7bb9ef79af22cf7c5d4a452a07d3844193fafac87a3a051b80fe693",
+    "cpp/LO/core/VerticalSurface.cpp": "0cdb806874e2327ee148ddc0d9ebf8fd70f40c4b22353d9ac318c7cb7abf847e"
+  },
+  "evaluation": "The position-alignment, KITTI timestamp-pairing and M2DGR gap-aware interpolation mathematics are unchanged. Release validation adds the paper algorithm_ms timing scope.",
+  "ground_truth_reference_point": "The local evidence does not establish the physical reference point of the supplied GT positions or the provenance of a KITTI sensor-origin conversion. No body-frame extrinsic correction is applied or inferred by these scripts."
+}

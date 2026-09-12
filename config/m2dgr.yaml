@@ -1,0 +1,10 @@
+dataset: m2dgr
+topic: /velodyne_points
+sequences: [room_01, hall_01, door_01, lift_01, street_03, street_04, street_05]
+replay_rate: 1.0
+min_range: 1.0
+max_range: 100.0
+voxel_size: 0.6
+max_points_per_voxel: 15
+initial_threshold: 2.0
+min_motion_th: 0.1

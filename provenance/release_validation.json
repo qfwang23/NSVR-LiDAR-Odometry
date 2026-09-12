@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-12",
+  "scope": "Clean release-directory build and synthetic checks only; no real dataset replay or new benchmark results.",
+  "frozen_core_commit": "def06cff6b0aedf1207dad3887aa705f8a29d638",
+  "frozen_core_files_verified_byte_identical": 13,
+  "paper_adapter_verified_byte_identical": true,
+  "environment": {
+    "compiler": "GNU C++ 9.4.0",
+    "cmake": "3.16",
+    "ros": "Noetic",
+    "python": "3.8.10",
+    "build_type": "Release",
+    "core_flags": "-O3 -DNDEBUG -std=gnu++17"
+  },
+  "build": {
+    "status": "passed",
+    "command": "cmake --build build -j2",
+    "dependency_note": "Fresh build of the release sources, using local cached Sophus 1.22.11 and robin-map 1.2.1 source directories via FETCHCONTENT_SOURCE_DIR overrides in the ignored build cache. First-time network fetching was not retested."
+  },
+  "ctest": {
+    "command": "cmake -E chdir build ctest --output-on-failure",
+    "passed": 6,
+    "failed": 0,
+    "seconds": 0.06
+  },
+  "python_unittest": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -B -m unittest discover -s tests -v",
+    "passed": 11,
+    "failed": 0,
+    "seconds": 1.727,
+    "synthetic_integration": "All four variants process four generated PointCloud2 messages from a temporary ROS bag. The release runner, primary timing scope, and position-evaluation CLI are checked. Temporary inputs and outputs are removed automatically."
+  }
+}

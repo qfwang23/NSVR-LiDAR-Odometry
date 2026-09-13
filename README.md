@@ -79,16 +79,6 @@ claim that it is the fastest or best on every sequence. M2DGR errors describe
 ground-truth-supported portions, including partial coverage on Door01 and
 Lift01. See the evaluation section below for timing and association details.
 
-## Reproducible source snapshot
-
-The 13 files under `cpp/LO/` are byte-identical to the frozen paper implementation
-at commit `def06cff6b0aedf1207dad3887aa705f8a29d638`.
-[provenance/frozen_source.json](provenance/frozen_source.json) records their
-SHA256 hashes, the paper configurations, and the adapter provenance. The adapter
-differs from the frozen development adapter only by the paper's `algorithm_ms` timer and
-CSV column. Packaging, documentation, and validation scripts do not change the
-odometry algorithm.
-
 ## Build and test
 
 The reference environment is Ubuntu 20.04, ROS Noetic, GCC 9.4, and CMake 3.16.
